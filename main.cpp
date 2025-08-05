@@ -1,5 +1,6 @@
 #include <iostream>
 #include "dva.hpp"
+#include "vector.hpp"
 
 int main() {
     Complex z0;
@@ -55,7 +56,16 @@ int main() {
 
     z4.real(0.0);
     z4.imag(5.0);
-    std::cout << "После изменения: z4 = (" << z4.real() << ", " << z4.imag() << "i)\n";
+    std::cout << "После изменения: z4 = (" << z4.real() << ", " << z4.imag() << "i)\n\n";
+
+    Vector v1(0, 0, 1, 1);
+Vector v2(1, 2, 2, 3);
+v1.print();
+v2.print();
+
+std::cout << "dx v1 = " << v1.dx() << ", dy v1 = " << v1.dy() << "\n";
+std::cout << (v1 == v2 ? "Вектори рівні\n" : "Вектори різні\n");
+
 
     return 0;
 }
